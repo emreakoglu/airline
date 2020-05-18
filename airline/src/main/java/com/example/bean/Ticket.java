@@ -26,7 +26,7 @@ public class Ticket {
 	private Passenger passenger; 
 	
 	// Birden fazla bilet bir uçuşa ait olabilir
-	@ManyToOne(cascade=CascadeType.REMOVE)
+	@ManyToOne
 	private Flight flight;
 	
 	// Ne kadar bilet alındıysa o kadar kredi kartı işlemi yapılmış gibi düşündüm.

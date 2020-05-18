@@ -28,9 +28,9 @@ public class Flight {
 	
 	private BigDecimal price;
 	
-	private int quota = 2;
+	private int quota = 15;
 	
-	private int oldQuota = 1;
+	private int oldQuota = 10;
 	
 	private int emptySeat = quota;
 	

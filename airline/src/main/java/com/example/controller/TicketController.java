@@ -41,11 +41,19 @@ public class TicketController {
 	
 	@RequestMapping(method= RequestMethod.POST, value ="/ticket/add")
 	@ResponseBody
-	public List<Ticket> addTicket(@RequestBody Ticket ticket) {
+	public Ticket addTicket(@RequestBody Ticket ticket) {
 		
-		ticket = ticketService.findByNo(ticket.getNo()).get();
 		
 		Flight flight = flightService.findByCode(ticket.getFlight().getCode());
+		if (flight == null) {
+			throw new NullPointerException(ticket.getFlight().getCode() +" Flight bulunamadı");
+		}
+		if (ticket.getPassenger() == null) {
+			throw new NullPointerException("Yolcu bilgilerini giriniz");
+		}
+		if (ticket.getCreditCard() == null) {
+			throw new NullPointerException("Kredi Kartı bilgilerini giriniz");
+		}
 		
 		ticket.setPrice(flight.getPrice());
 		ticket.setFlight(flight);
@@ -67,7 +75,7 @@ public class TicketController {
 		}
 		flightService.addFligth(flight);
 		
-		return ticketService.findByFlight(flight);
+		return ticket;
 	}
 	
 	@RequestMapping(method = RequestMethod.GET, value="/ticket/getAll")

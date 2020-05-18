@@ -48,6 +48,32 @@ public class CustomGlobalExceptionHandler extends ResponseEntityExceptionHandler
 
     }
 	
+	@ExceptionHandler(FligthQuotaExceed.class)
+    public ResponseEntity<CustomErrorResponse> fligthQuotaExceed(Exception ex, WebRequest request) {
+
+        CustomErrorResponse errors = new CustomErrorResponse();
+        errors.setTimestamp(LocalDateTime.now());
+        errors.setError(ex.getMessage());
+        errors.setStatus(HttpStatus.METHOD_FAILURE.value());
+
+        return new ResponseEntity<>(errors, HttpStatus.METHOD_FAILURE);
+
+    }
+	
+	@ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<CustomErrorResponse> customnullPointer(Exception ex, WebRequest request) {
+
+        CustomErrorResponse errors = new CustomErrorResponse();
+        errors.setTimestamp(LocalDateTime.now());
+        errors.setError(ex.getMessage());
+        errors.setStatus(HttpStatus.BAD_REQUEST.value());
+
+        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+
+    }
+	
+	
+	
 	@ExceptionHandler(ConstraintViolationException.class)
     public void constraintViolationException(HttpServletResponse response) throws IOException {
         response.sendError(HttpStatus.BAD_REQUEST.value());
