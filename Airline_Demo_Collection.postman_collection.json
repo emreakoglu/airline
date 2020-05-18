@@ -1,0 +1,1209 @@
+{
+	"info": {
+		"_postman_id": "8f20de10-6339-476f-a77a-5dcd93a93048",
+		"name": "Airline_Demo_Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Airline",
+			"item": [
+				{
+					"name": "Airline_Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Emre\",\n    \"headOfficeAddress\": \"Maslak\",\n    \"employeeCount\": 20,\n    \"balance\": 12.2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/airline/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airline",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airline/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airline",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline_SearchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airline/searchbyid?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airline",
+								"searchbyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline_SearchByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airline/searchbyname?name=Emre",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airline",
+								"searchbyname"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Emre"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airline_DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airline/deletebyid?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airline",
+								"deletebyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "AirPort",
+			"item": [
+				{
+					"name": "Airport_Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"longitude\": 40.1281,\n    \"latitude\": 32.9951,\n    \"gateCount\": 20,\n    \"runwayCount\": 7,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/airport/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airport",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airport_Add_All",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"name\": \"Sabiha Gokcen\",\n        \"longitude\": 40.912022,\n        \"latitude\": 29.313393,\n        \"gateCount\": 30,\n        \"runwayCount\": 2,\n        \"id\": 1\n    },\n    {\n        \"name\": \"Istanbul Havalimani\",\n        \"longitude\": 40.9769,\n        \"latitude\": 28.8146,\n        \"gateCount\": 25,\n        \"runwayCount\": 4,\n        \"id\": 2\n    },\n    {\n        \"name\": \"Esenboga Havalimani\",\n        \"longitude\": 40.1281,\n        \"latitude\": 32.9951,\n        \"gateCount\": 20,\n        \"runwayCount\": 3,\n        \"id\": 3\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/airport/addAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airport",
+								"addAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airport_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airport/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airport",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airport_SearchByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airport_SearchByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Airport_DeleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/airport/deletebyid?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"airport",
+								"deletebyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Route",
+			"item": [
+				{
+					"name": "Route_Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": {\r\n        \"name\": \"Esenboga Havalimani\"\r\n    },\r\n    \"to\": {\r\n        \"name\": \"Sabiha Gokcen\"\r\n    },\r\n    \"cities\": [\r\n        {\r\n        \t\"order\": 1,\r\n            \"name\": \"Ankara\"\r\n        },\r\n        {\r\n        \t\"order\": 2,\r\n            \"name\": \"Bolu\"\r\n        },\r\n        {\r\n        \t\"order\": 3,\r\n            \"name\": \"Istanbul\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_SearchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_searchByFromName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyfromname?fromName=Esenboga Havalimani",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyfromname"
+							],
+							"query": [
+								{
+									"key": "fromName",
+									"value": "Esenboga Havalimani"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_searchByToName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbytoname?toName=Istanbul Havalimani",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbytoname"
+							],
+							"query": [
+								{
+									"key": "toName",
+									"value": "Istanbul Havalimani"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_SearchByFrom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"longitude\": 40.1281,\n    \"latitude\": 32.9951,\n    \"gateCount\": 20,\n    \"runwayCount\": 3,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyfrom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyfrom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_SeacrhByTo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"longitude\": 40.1281,\n    \"latitude\": 32.9951,\n    \"gateCount\": 20,\n    \"runwayCount\": 3,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_SearchBy_Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"TK120982\",\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\"\n    },\n    \"to\": {\n        \"name\": \"Sabiha Gokcen\"\n    },\n    \"airline\": {\n        \"name\": \"Emre\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyflight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyflight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_SearchByFromAndTo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\",\n        \"longitude\": 40.1281,\n        \"latitude\": 32.9951,\n        \"gateCount\": 20,\n        \"runwayCount\": 3,\n        \"id\": 3\n    },\n    \"to\": {\n        \"name\": \"Esenboga Havalimani\",\n        \"longitude\": 40.1281,\n        \"latitude\": 32.9951,\n        \"gateCount\": 20,\n        \"runwayCount\": 3,\n        \"id\": 3\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyfromandto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyfromandto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_DeleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/deletebyid?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"deletebyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Route_DeleteByAirport",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/deletebyairport",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"deletebyairport"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Flight",
+			"item": [
+				{
+					"name": "Fligth_Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"TK120982\",\n    \"price\": 210,\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\"\n    },\n    \"to\": {\n        \"name\": \"Sabiha Gokcen\"\n    },\n    \"airline\": {\n        \"name\": \"Emre\"\n    },\n    \"id\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SearchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SearchByFromName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SearchByToName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/searchbytoname?toName=Esenboga Havalimanı",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"searchbytoname"
+							],
+							"query": [
+								{
+									"key": "toName",
+									"value": "Esenboga Havalimanı"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SearchByFrom",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"longitude\": 40.1281,\n    \"latitude\": 32.9951,\n    \"gateCount\": 20,\n    \"runwayCount\": 7,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/searchbyfrom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"searchbyfrom"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SeacrhByTo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"longitude\": 40.1281,\n    \"latitude\": 32.9951,\n    \"gateCount\": 20,\n    \"runwayCount\": 3,\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SearchByFromAndTo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\",\n        \"longitude\": 40.1281,\n        \"latitude\": 32.9951,\n        \"gateCount\": 20,\n        \"runwayCount\": 3,\n        \"id\": 3\n    },\n    \"to\": {\n        \"name\": \"Esenboga Havalimani\",\n        \"longitude\": 40.1281,\n        \"latitude\": 32.9951,\n        \"gateCount\": 20,\n        \"runwayCount\": 3,\n        \"id\": 3\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/searchbyfromandto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"searchbyfromandto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_SeacrhByTCKN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": null,\n    \"surname\": null,\n    \"id\": null,\n    \"age\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/searchbytckn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"searchbytckn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Fligth_DeleteByID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/route/deletebyid?id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"route",
+								"deletebyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight_DeleteByAirport",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Esenboga Havalimani\",\n    \"id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/deletebyairport",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"deletebyairport"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Flight_DeleteByAirline",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Emre\",\r\n        \"id\": 1\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/flight/deletebyairline",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"flight",
+								"deletebyairline"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "Ticket_Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"passenger\": {\r\n    \"name\": \"emre\",\r\n    \"surname\": \"Akoglu\",\r\n    \"age\": 26\r\n  },\r\n  \"flight\": {\r\n    \"code\": \"TK120982\"\r\n  },\r\n  \"creditCard\": {\r\n    \"cardNo\": \"4221,1611,2233,0005\",\r\n    \"nameAndSurname\": \"Mert Toprak\",\r\n    \"cvc\": 892\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_SearchById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/searchbyid?id=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"searchbyid"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_SearchByPassengerTCKN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": null,\n    \"surname\": null,\n    \"id\": null,\n    \"age\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/searchbytckn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"searchbytckn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_SearchBy_Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"TK120982\",\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\"\n    },\n    \"to\": {\n        \"name\": \"Sabiha Gokcen\"\n    },\n    \"airline\": {\n        \"name\": \"Emre\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/searchbyflight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"searchbyflight"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_CancelByNo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/cancelbyno?no=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"cancelbyno"
+							],
+							"query": [
+								{
+									"key": "no",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ticket_CancelByFlight",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"TK120982\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/cancelbyflight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"cancelbyflight"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Passenger",
+			"item": [
+				{
+					"name": "Passenger_GetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/passenger/getAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"passenger",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passenger_SearchByName",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passenger_SearchBySurname",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8083/finartz/passenger/searchbysurname?surname=Akoglu",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"passenger",
+								"searchbysurname"
+							],
+							"query": [
+								{
+									"key": "surname",
+									"value": "Akoglu"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passenger_SearchByPassengerTCKN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": null,\n    \"surname\": null,\n    \"id\": null,\n    \"age\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/passenger/searchbytckn",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"passenger",
+								"searchbytckn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Passenger_SearchBy_Flight",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"TK120982\",\n    \"from\": {\n        \"name\": \"Esenboga Havalimani\"\n    },\n    \"to\": {\n        \"name\": \"Sabiha Gokcen\"\n    },\n    \"airline\": {\n        \"name\": \"Emre\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/finartz/ticket/searchbyflight",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"finartz",
+								"ticket",
+								"searchbyflight"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
